@@ -18,6 +18,7 @@ export type Store = {
   closed: string;
   photo: string;
   menu: MenuItem[];
+  officialInstagram?: string;
 };
 
 // デモ情報です。公開前に実際の会社・店舗情報へ差し替えてください。
@@ -42,6 +43,19 @@ export const companies: Company[] = [
   },
 ];
 export const stores: Store[] = [
+  {
+    slug: "chill-chiba",
+    companySlug: "",
+    name: "Chill Chiba",
+    category: "SHISHA",
+    description: "Chill Chiba の店舗・スタッフ紹介。",
+    address: "確認中",
+    hours: "確認中",
+    closed: "確認中",
+    photo: "/images/chill-chiba.svg",
+    menu: [],
+    officialInstagram: "https://www.instagram.com/chillchiba__/",
+  },
   {
     slug: "aoyama-coffee",
     companySlug: "aoyama-living",

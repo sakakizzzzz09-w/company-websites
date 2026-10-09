@@ -56,3 +56,204 @@ section[id] {
     transition: none !important;
   }
 }
+
+.members-theme-default {
+  --member-bg: #efeee8;
+  --member-panel: #f8f7f3;
+  --member-text: #292e29;
+  --member-muted: #625c52;
+  --member-accent: #756345;
+  --member-border: #ccc4b6;
+}
+.members-theme-chill {
+  --member-bg: #100d0c;
+  --member-panel: #241a17;
+  --member-text: #f4eee5;
+  --member-muted: #c9bcb0;
+  --member-accent: #c6a774;
+  --member-border: #735b44;
+  background-image: radial-gradient(
+    ellipse at top right,
+    #4b1c28,
+    transparent 65%
+  );
+}
+.members-shell {
+  background-color: var(--member-bg);
+  color: var(--member-text);
+  padding: 2.5rem 1.5rem 5rem;
+}
+.members-container {
+  max-width: 1120px;
+  margin: auto;
+}
+.member-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  font-size: 0.875rem;
+}
+.members-heading {
+  margin: 3rem 0;
+}
+.members-heading h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 6vw, 4rem);
+  letter-spacing: 0.08em;
+  margin: 1rem 0;
+}
+.member-role {
+  color: var(--member-accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+}
+.member-muted {
+  color: var(--member-muted);
+  line-height: 1.8;
+}
+.members-grid {
+  display: grid;
+  gap: 2rem;
+}
+.member-card {
+  background: var(--member-panel);
+  border: 1px solid var(--member-border);
+}
+.member-photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+.member-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  color: var(--member-muted);
+  background: var(--member-panel);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+}
+.member-card-body {
+  padding: 1.5rem;
+}
+.member-card h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin: 0.75rem 0;
+  overflow-wrap: anywhere;
+}
+.member-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+.member-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0.75rem;
+  border: 1px solid var(--member-border);
+  color: var(--member-text);
+}
+.member-socials a:hover,
+.member-button:hover {
+  background: var(--member-border);
+}
+.member-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  gap: 1rem;
+  border-top: 1px solid var(--member-border);
+  padding: 1rem 0;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+}
+.members-shell a:focus-visible {
+  outline: 2px solid var(--member-accent);
+  outline-offset: 4px;
+}
+.members-empty {
+  border: 1px solid var(--member-border);
+  padding: 3rem 1.5rem;
+  line-height: 2;
+}
+.member-profile {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+.member-profile h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 1rem 0;
+  overflow-wrap: anywhere;
+}
+.member-introduction {
+  white-space: pre-line;
+  line-height: 2;
+  margin: 2rem 0;
+}
+.member-details {
+  border-top: 1px solid var(--member-border);
+}
+.member-details > div {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--member-border);
+}
+.member-details dt {
+  color: var(--member-accent);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+.member-details dd {
+  white-space: pre-line;
+  line-height: 1.8;
+}
+@media (min-width: 640px) {
+  .members-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .members-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 768px) {
+  .member-profile {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 4rem;
+  }
+  .members-shell {
+    padding: 3rem 3rem 6rem;
+  }
+}
+
+.chill-store {
+  background: radial-gradient(ellipse at top right, #4b1c28, #100d0c 70%);
+  color: #f4eee5;
+  padding-bottom: 3rem;
+}
+.chill-store .eyebrow {
+  color: #c6a774;
+}
+.chill-store .text-stone-600,
+.chill-store .text-stone-500 {
+  color: #c9bcb0;
+}
+.chill-store .border-stone-200,
+.chill-store .border-stone-300,
+.chill-store .divide-stone-200 > div {
+  border-color: #735b44;
+}
+.chill-store a:focus-visible {
+  outline-color: #c6a774;
+}

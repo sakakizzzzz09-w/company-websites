@@ -17,7 +17,9 @@ export default async function StorePage({ params }: Props) {
   if (!store) notFound();
   const company = companyBySlug(store.companySlug);
   return (
-    <article className="mx-auto max-w-6xl px-6 pt-10 md:px-12">
+    <article
+      className={`mx-auto max-w-6xl px-6 pt-10 md:px-12 ${store.slug === "chill-chiba" ? "chill-store" : ""}`}
+    >
       <Link href="/#stores" className="text-xs text-stone-600">
         ← 店舗一覧へ
       </Link>
@@ -40,6 +42,24 @@ export default async function StorePage({ params }: Props) {
           className="aspect-[4/3] w-full object-cover"
         />
       </div>
+      {store.officialInstagram && (
+        <a
+          href={store.officialInstagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-flex min-h-12 items-center underline"
+        >
+          店舗公式 Instagram（新しいタブ）
+        </a>
+      )}
+      <section className="mt-14">
+        <Link
+          href={`/stores/${store.slug}/members`}
+          className="inline-flex min-h-12 items-center gap-8 border-y border-stone-300 py-4 text-sm tracking-widest"
+        >
+          OUR MEMBERS — スタッフ紹介 <span aria-hidden="true">↗</span>
+        </Link>
+      </section>
       <section className="mt-14">
         <h2 className="font-serif text-2xl">店舗情報</h2>
         <dl className="mt-6 divide-y divide-stone-200 border-y border-stone-200">
